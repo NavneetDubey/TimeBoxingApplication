@@ -1,0 +1,125 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url('F:/Wallpapers/cherry.jpg') no-repeat center center fixed;
+    /* Ensure correct file path format */
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: rgba(230, 230, 250, 0.95);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: auto;
+    /* Centering the container */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Center align the container's children */
+    width: fit-content;
+    /* Adjust width based on content */
+    max-width: 90%;
+    /* Prevents the container from being too wide on larger screens */
+}
+
+.input-group,
+.timer-display,
+.snooze-finish-pause {
+    width: 100%;
+    /* Ensure full width for alignment */
+    display: flex;
+    flex-direction: column;
+    /* Stack the elements */
+    align-items: center;
+    /* Center align the elements */
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="number"] {
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+    /* Adjust input width */
+    box-sizing: border-box;
+    /* Include padding and border in the element's total width */
+}
+
+button {
+    background-color: #957DAD;
+    color: white;
+    border: none;
+    /* Updated for aesthetics */
+    border-radius: 4px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+    background-color: #7E689F;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    /* Ensure full width */
+}
+
+li {
+    background-color: #E6E6FA;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    /* Ensure list items take full width */
+}
+
+.timer-display p,
+#inspirationalQuote p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #4B0082;
+}
+
+#inspirationalQuote {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: 80%;
+    text-align: center;
+}
+
+.snooze-finish-pause {
+    display: flex;
+    justify-content: center;
+    /* Center the buttons */
+    width: 100%;
+    /* Correct width for alignment */
+    gap: 10px;
+    /* Space between buttons */
+}
+
+.active-task {
+    border-left: 5px solid #4B0082;
+}

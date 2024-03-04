@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timebox Scheduler</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="inspirationalQuote" style="display:none;">
+        <p>"Do what you love and the necessary resources will follow."</p>
+    </div>
+
+    <audio id="lofiMusic" loop>
+        <source src="C:\Users\Admin\Downloads\kkCover.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Add this inside your existing container where appropriate -->
+
+    <div class="snooze-finish-pause" id="taskControls" style="display:none;">
+        <button onclick="pauseTask()">Pause</button>
+        <button onclick="snoozeTask()">Snooze</button>
+        <button onclick="finishCurrentTask()">Finish Task</button>
+    </div>
+
+    <div class="container">
+        <h2>Timebox Scheduler</h2>
+        <div class="input-group">
+            <input type="text" id="taskInput" placeholder="Enter task name...">
+            <input type="number" id="timeInput" placeholder="Time in minutes...">
+            <button onclick="addTask()">Add Task</button>
+        </div>
+        <div id="routine">
+            <h3>Routine Tasks</h3>
+            <ul id="taskList"></ul>
+            <div class="timer-display">
+                <p>Current Task: <span id="currentTaskTimer">00:00</span></p>
+                <p>Total Routine Time: <span id="totalRoutineTimer">00:00</span></p>
+            </div>
+            <button id="startRoutine" onclick="startRoutine()">Start Routine</button>
+            <div class="snooze-finish" id="snoozeFinishOptions" style="display:none;">
+                <button onclick="snoozeTask()">Snooze</button>
+                <button onclick="finishRoutine()">Finish</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
